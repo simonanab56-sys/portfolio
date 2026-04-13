@@ -1,0 +1,153 @@
+
+.hero-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  
+  gap: 40px;
+  transition: all 0.3s ease;
+}
+
+
+.hero-container {
+  max-width: 600px;
+}
+
+
+.hero-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-container h1 span {
+  color: #6c63ff;
+}
+
+.hero-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+
+.hero-container p {
+  font-size: larger;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+
+.btn {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+
+.btn button:first-child {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.btn button:first-child:hover {
+  background-color: #574fd6;
+}
+
+.btn button:last-child {
+  background-color: transparent;
+  border: 1px solid #6c63ff;
+  color: #6c63ff;
+}
+
+.btn button:last-child:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+
+.social-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li a {
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s;
+ font-size: larger;
+ cursor: pointer;
+}
+
+.social-links li a:hover {
+  color: #6c63ff;
+}
+
+.social-links li a{
+text-decoration: none;
+}
+
+
+.hero-main-container img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-main-container img:hover{
+transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌙 DARK MODE */
+body.dark .hero-main-container {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark .hero-container p {
+  color: #ccc;
+}
+
+body.dark .btn button:last-child {
+  border: 1px solid #aaa;
+  color: #aaa;
+}
+
+body.dark .btn button:last-child:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .hero-main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-main-container img {
+    width: 220px;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .social-links ul {
+    justify-content: center;
+  }
+}
